@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace BrandApplication.Domain.Models
 {
-    public class Brand
+    public class ProductModel
     {
         [Key]
-        public int BrandId { get; set; }
-        public string? BrandName { get; set; }
+        public int ModelId { get; set; }
+        public string ModelName { get; set; }
 
-        public ICollection<ProductModel>? Models { get; set; }
+        public int BrandId { get; set; }
+        public Brand Brand { get; set; }
     }
 }
